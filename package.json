@@ -8,10 +8,10 @@
   "homepage": "https://tiptoftx.vercel.app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/happykhan/tiptoftx.git"
+    "url": "https://github.com/genomicx/tiptoftx.git"
   },
   "bugs": {
-    "url": "https://github.com/happykhan/tiptoftx/issues"
+    "url": "https://github.com/genomicx/tiptoftx/issues"
   },
   "keywords": ["tiptoftx", "bioinformatics", "genomics", "plasmid", "fastq"],
   "scripts": {
