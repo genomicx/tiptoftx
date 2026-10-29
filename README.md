@@ -2,6 +2,8 @@
 
 Browser-based plasmid incompatibility group detection from uncorrected long reads using k-mer matching against PlasmidFinder database.
 
+Live app: [tiptoftx.genomicx.org](https://tiptoftx.genomicx.org)
+
 ## Features
 
 - No assembly required — works directly from raw FASTQ reads
@@ -26,6 +28,11 @@ npm run dev
 npm test
 npm run build
 ```
+
+## Hosting
+
+Cloudflare Pages serves the static `dist` output, including the bundled database
+at `/db/plasmid_data.fa`. Use Node 24 and `npm run build`.
 
 ## Citation
 

@@ -33,16 +33,13 @@
 .header-top h1 {
   font-size: 1.375rem;
   font-weight: 700;
-  background: var(--gx-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--gx-nav-text);
   line-height: 1.2;
 }
 
 .subtitle {
   font-size: 0.8rem;
-  color: var(--gx-text-muted);
+  color: var(--gx-nav-muted);
   margin-top: 2px;
 }
 
@@ -70,7 +67,7 @@
   padding: 0 var(--gx-space-6);
   display: flex;
   gap: var(--gx-space-1);
-  border-top: 1px solid var(--gx-border);
+  border-top: 1px solid #424953;
 }
 
 .tab {
@@ -81,18 +78,18 @@
   cursor: pointer;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--gx-text-muted);
+  color: var(--gx-nav-muted);
   transition: color var(--gx-transition), border-color var(--gx-transition);
   margin-bottom: -1px;
 }
 
 .tab:hover {
-  color: var(--gx-text);
+  color: var(--gx-nav-text);
 }
 
 .tab-active {
-  color: var(--gx-accent);
-  border-bottom-color: var(--gx-accent);
+  color: var(--gx-nav-text);
+  border-bottom-color: #90b7f0;
 }
 
 /* Main content */
@@ -176,7 +173,7 @@
   align-items: center;
   gap: var(--gx-space-2);
   background: var(--gx-accent);
-  color: #fff;
+  color: var(--gx-text-inverted);
   border: none;
   border-radius: var(--gx-radius);
   padding: var(--gx-space-3) var(--gx-space-6);
@@ -192,7 +189,8 @@
 }
 
 .run-button:disabled {
-  opacity: 0.5;
+  background: var(--gx-disabled-bg);
+  color: var(--gx-disabled-text);
   cursor: not-allowed;
 }
 
@@ -310,7 +308,7 @@
   border-radius: var(--gx-radius-lg);
   padding: var(--gx-space-4);
   font-family: var(--gx-font-mono);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   line-height: 1.6;
   color: var(--gx-text-muted);
   max-height: 280px;
@@ -356,7 +354,7 @@
 }
 
 .log-line-num {
-  color: var(--gx-border);
+  color: var(--gx-text-muted);
   user-select: none;
   min-width: 2.5rem;
   text-align: right;
@@ -686,4 +684,15 @@
   gap: var(--gx-space-4);
   margin-bottom: var(--gx-space-6);
   flex-wrap: wrap;
+}
+
+/* Retain the original native-control line boxes with IBM Plex Sans. */
+.tab,
+.options-panel input[type="number"],
+.options-panel input[type="range"] {
+  line-height: 16px;
+}
+
+.run-button {
+  line-height: 17px;
 }
